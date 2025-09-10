@@ -1,0 +1,29 @@
+body {
+    /* Animierter, alternierender dunkler Blau-Lila-Hintergrund */
+    background: linear-gradient(270deg, #0a1a3c, #3a0a3c, #11235a, #6a1a8c, #0a1a3c);
+    background-size: 800% 800%;
+    animation: bluePurpleShift 30s ease-in-out infinite;
+    color: white;
+}
+
+@keyframes bluePurpleShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.info-box {
+    background: linear-gradient(135deg, rgba(130, 80, 200, 0.7), rgba(80, 130, 200, 0.5));
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    margin: 5px;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}

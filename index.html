@@ -5,72 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/bootstrap.css">
     <script src="src/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
     <title>PPL Checks & Procedures </title>
 </head>
 <body>
     <div class="container">
-        <h6 style="color: red;">Disclaimer: Do not use this information as a reference. Always consider local regultations and the official AFM!</h6>
+        <br><span class="badge bg-danger">Do NOT use for real flight planning!</span>
         <h1>PPL</h1>
         <h2>C152</h2>
-        <h3>Formulas and Rules of Thumb</h3>
-        <p>Load Factor = 1/cos(bank °)</p>
-        <p>Vstall bank = Vstall * sqrt(load factor)</p>
-        <p>TOD [NM] = (Current Altitude - Desired Altitude) / 1000 * 3</p>
-        <p>+27ft for every hPa increasea</p>
-        <p>-2K for every 1000ft increase</p>
-        <p>IAS + 2% for every 1000ft increase</p>
-        <h3>Speeds</h3>
-        <p>Vrotate 50 kts</p>
-        <p>Vx 60 kts</p>
-        <p>Vy 67 kts</p>
-        <p>Vbest glide 60 kts</p>
-        <p>Vcruise climb 70 kts</p>
-        <p>Vbase 65 kts</p>
-        <p>Vfinal 60 kts</p>
-        <h3>Fuel</h3>
-        <p>Total Capacity: 26 USG / 98.41 l</p>
-        <p>Total Usable Fuel: 24.5 USG / 92.7 l </p>
-        <p>Fuel Consumption: 6 USG / h or 24 l / h</p>
-        <h3>Mechanical Dimensions</h3>
-        <p>Wingspan: 33 feet and 4 inches / 10.3 meters</p>
-        <h3>Conversions</h3>
-        <p>1 USG = 3.785 l</p>
-        <p>1 NM = 1.852 km</p>
-        <p>1 min = 1.333 NM</p>
-        <p>1 NM = 0.666 min</p>
-        <h3>Emergency Checklist</h3>
-        <h4></h4>
-        <h3>Airwork Manouvers</h3>
-        <h4>Approach to stall in clean config</h4>
-        <ol>
-            <li>Lookout / HASELL</li>
-            <li>Approach check (Carb heat)</li>
-            <li>PWR idle</li>
-            <li>Defend the altitude by pitch</li>
-            <li>When approaching stall -> Nose down, Go around (Full PWR, carb heat off)</li>
-            <li>Climb check</li>
-        </ol>
-        <h4>Approach to stall in landing config</h4>
-        <h4>Full stall in clean config</h4>
-        <h4>Full stall in landing config</h4>
-        <h4>Approach to stall in approach config (Flaps 20°)</h4>
-        <h4>Recover from spiral dive</h4>
+        <div class="row">
+            <div class="col info-box">
+                <h3>Formulas and Rules of Thumb</h3>
+                <p>Load Factor = 1/cos(bank °)</p>
+                <p>Vstall bank = Vstall * sqrt(load factor)</p>
+                <p>TOD [NM] = (Current Altitude - Desired Altitude) / 1000 * 3</p>
+                <p>+27ft for every hPa increasea</p>
+                <p>-2K for every 1000ft increase</p>
+                <p>IAS + 2% for every 1000ft increase. TAS is compensated also for temperature, IAS is not.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 info-box">
+                <h3>Speeds</h3>
+                <p>Vrotate 50 kts</p>
+                <p>Vx 60 kts</p>
+                <p>Vy 67 kts</p>
+                <p>Vbest glide 60 kts</p>
+                <p>Vcruise climb 70 kts</p>
+                <p>Vbase 65 kts</p>
+                <p>Vfinal 60 kts</p>
+                <p><span class="badge bg-success">Note</span> Wind increments on Final: for wind ≥10 kts, add 1/3 of headwind comp or full wind gust spread, whichever is higher, to Vfinal.</p>
+            </div>
+            <div class="col info-box">
+                <h3>Fuel</h3>
+                <p>Total Capacity: 26 USG / 98.41 l</p>
+                <p>Total Usable Fuel: 24.5 USG / 92.7 l </p>
+                <p>Fuel Consumption: 6 USG / h or 24 l / h</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col info-box">
+                <h3>Mechanical Dimensions</h3>
+                <p>Wingspan: 33 feet and 4 inches / 10.3 meters</p>
+            </div>
+            <div class="col-3 info-box">
+                <h3>Conversions</h3>
+                <p>1 USG = 3.785 l</p>
+                <p>1 NM = 1.852 km</p>
+                <p>1 min = 1.333 NM</p>
+                <p>1 NM = 0.666 min</p>
+                <p>1 ft = 0.3048 m</p>
+                <p>1 m = 3.28084 ft</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col info-box">
+                <h3><span class="badge bg-danger">Emergency Checklist</span></h3>
+                <h4>Engine problem during take of roll</h4>
+                <ol>
+                    <li>Power idle</li>
+                    <li>Brakes as required</li>
+                    <li>Full stop</li>
+                    <li>Flaps up <span class="badge bg-primary">Optional</span></li>
+                    <li>Mixture cutoff <span class="badge bg-primary">Optional</span></li>
+                    <li>Ignition off <span class="badge bg-primary">Optional</span></li>
+                    <li>Master switch off <span class="badge bg-primary">Optional</span></li>
+                </ol>
+                <h4>Engine problem after take off</h4>
+                <ol>
+                    <li>Nose down, Vbestglide 60 kt</li>
+                    <li>Land within 30° left/right</li>
+                    <li>No turnaround below 1000 ft AGL</li>
+                    <li>Mixture cutoff</li>
+                    <li>Shut off valve close</li>
+                    <li>Ignition off</li>
+                    <li>Flaps as required</li>
+                    <li>Master switch off</li>
+                </ol>
+                <h3>Airwork Maneuvers</h3>
+                <h4>Approach to stall in clean config</h4>
+                <ol>
+                    <li>Lookout / HASELL</li>
+                    <li>Approach check (Carb heat)</li>
+                    <li>PWR idle</li>
+                    <li>Defend the altitude by pitch</li>
+                    <li>When approaching stall -> Nose down, Go around (Full PWR, carb heat off)</li>
+                    <li>Climb check</li>
+                </ol>
+                <h4>Approach to stall in landing config</h4>
+                <h4>Full stall in clean config</h4>
+                <h4>Full stall in landing config</h4>
+                <h4>Approach to stall in approach config (Flaps 20°)</h4>
+                <h4>Recover from spiral dive</h4>
 
-        <h4>Power idle approach</h4>
-        <ol>
-            <li>Vbest glide: 60 kt</li>
-            <li>Fly best heading (look for close and suitable spot to land)</li>
-            <li>Approach Check + Magnetos + Primer secured</li>
-            <li>At key position - Flaps 10°</li>
-            <li>Aim for the middle of the runway, if landing success is assured, proceed with flaps and aim for normal aiming point</li>
-        </ol>
-        <h4>Zero flaps approach</h4>
-        <p>PWR idle when approaching glide, base and final speeds 5 kt higher than usual!</p>
-        <ol>
-            <li>Approaching glide - PWR idle</li>
-            <li>Base 70 kt</li>
-            <li>Final 65 kt</li>
-        </ol>
+                <h4>Power idle approach</h4>
+                <ol>
+                    <li>Vbest glide: 60 kt</li>
+                    <li>Fly best heading (look for close and suitable spot to land, key position 1000 ft AGL & 1NM distance to threshold)</li>
+                    <li>Approach Check + Magnetos + Primer secured</li>
+                    <li>At key position - Flaps 10°</li>
+                    <li>Aim for the middle of the runway, if landing success is assured, proceed with flaps and aim for normal aiming point</li>
+                </ol>
+                <h4>Zero flaps approach</h4>
+                <p>PWR idle when approaching glide, base and final speeds 5 kt higher than usual!</p>
+                <ol>
+                    <li>Approaching glide - PWR idle</li>
+                    <li>Base 70 kt</li>
+                    <li>Final 65 kt</li>
+                </ol>
+            </div>
+        </div>
         
 
     
